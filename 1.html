@@ -1,0 +1,41 @@
+<!-- Кузина София ИСП-322р -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вычисление суммы чисел</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" id="inpx" placeholder="Введите первое число">
+        <input type="text" id="inpy" placeholder="Введите второе число">
+        <button id="btn">Вычислить</button>
+
+        <h1 id="result"></h1>
+    </form>
+
+    <script>
+        // Получаем элементы по ID
+        const inputX = document.getElementById('inpx');
+        const inputY = document.getElementById('inpy');
+        const result = document.getElementById('result');
+        const btn = document.getElementById('btn');
+
+        // Добавляем обработчик клика по кнопке
+        btn.addEventListener('click', handleClick);
+
+        // Функция для вычисления суммы
+        function count(inputX, inputY, result) {
+            let sum = Number(inputX.value) + Number(inputY.value);
+            result.textContent = sum;
+        }
+
+        // Функция обработки клика по кнопке
+        function handleClick() {
+            count(inputX, inputY, result);
+        }
+    </script>
+</body>
+</html>
